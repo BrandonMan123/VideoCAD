@@ -1,0 +1,51 @@
+{
+    "diffusion_transformer_lowdim": {
+        "model_name": "diffusion_transformer_lowdim",
+        "diffusion_type": "transformer",
+        "horizon": 10,
+        "obs_dim": 128,
+        "action_dim": 7,
+        "n_action_steps": 10,
+        "n_obs_steps": 10,
+        "encoder": "resnet",
+        "enable_image_conditioning": true,
+        "obs_as_cond": true,
+        "pred_action_steps_only": true,
+        "train_config": {
+            "optimizer": {
+                "learning_rate": 1.0e-4,
+                "weight_decay": 1.0e-1,
+                "betas": [0.9, 0.95]
+            }
+        }
+    },
+    "diffusion_transformer_test": {
+        "model_name": "diffusion_transformer_lowdim",
+        "diffusion_type": "transformer",
+        "horizon": 1,
+        "obs_dim": 128,
+        "action_dim": 7,
+        "n_action_steps": 1,
+        "n_obs_steps": 1,
+        "encoder": "resnet",
+        "enable_image_conditioning": true,
+        "obs_as_cond": true,
+        "pred_action_steps_only": true,
+        "train_config": {
+            "optimizer": {
+                "learning_rate": 1.0e-4,
+                "weight_decay": 1.0e-1,
+                "betas": [0.9, 0.95]
+            }
+        }
+    },
+    "diffusion_conv_lowdim": {
+        "model_name": "diffusion_conv_lowdim",
+        "diffusion_type": "conv",
+        "horizon": 10,
+        "obs_dim": 128,
+        "action_dim": 7,
+        "n_action_steps": 10,
+        "n_obs_steps": 10
+    }
+}

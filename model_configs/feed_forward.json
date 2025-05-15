@@ -1,0 +1,70 @@
+{
+    "feed_forward_multi_classes": {
+        "model_name": "feed_forward_multi_classes",
+        "state_dim": 1644,
+        "act_dim": 7,
+        "hidden_size": 128,
+        "max_length": null,
+        "num_classes": 5,
+        "window_size": 1,
+        "num_views": 0,
+        "action_window_size": 1,
+        "enable_image_conditioning": true,
+        "encoder": "resnet",
+        "network_layers": [512, 256, 128, 64]
+    },
+    "feed_forward_multi_classes_multiview": {
+        "model_name": "feed_forward_multi_classes",
+        "state_dim": 1644,
+        "act_dim": 7,
+        "hidden_size": 128,
+        "max_length": null,
+        "num_classes": 5,
+        "window_size": 1,
+        "action_window_size": 1,
+        "num_views": 2,
+        "enable_image_conditioning": true,
+        "encoder": "resnet",
+        "network_layers": [512, 256, 128, 64]
+    },
+    "feed_forward_multi_classes_multiview_left_right_top": {
+        "model_name": "feed_forward_multi_classes",
+        "state_dim": 1644,
+        "act_dim": 7,
+        "hidden_size": 128,
+        "max_length": null,
+        "num_classes": 5,
+        "window_size": 1,
+        "action_window_size": 1,
+        "num_views": 3,
+        "enable_image_conditioning": true,
+        "encoder": "resnet",
+        "network_layers": [512, 256, 128, 64]
+    },
+    "feed_forward_multi_classes_more_windows": {
+        "model_name": "feed_forward_multi_classes",
+        "state_dim": 1644,
+        "act_dim": 7,
+        "hidden_size": 128,
+        "max_length": null,
+        "num_classes": 5,
+        "window_size": 5,
+        "action_window_size": 1,
+        "enable_image_conditioning": true,
+        "encoder": ["resnet","vit"],
+        "network_layers": [[512, 256, 128, 64]]
+    },
+    "feed_forward_high_level_classification": {
+        "model_name": "feed_forward_multi_classes",
+        "state_dim": 1644,
+        "act_dim": 1,
+        "hidden_size": 128,
+        "max_length": null,
+        "num_classes": 5,
+        "window_size": 5,
+        "action_window_size": 1,
+        "enable_image_conditioning": true,
+        "encoder": ["resnet","vit"],
+        "network_layers": [[512, 256, 128, 64]]
+    }
+}
